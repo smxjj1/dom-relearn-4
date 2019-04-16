@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" value="设定定时器" id="btn1"/>
+<input type="button" value="清除定时器" id="btn2"/>
+<script>
+    var timer = null;
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    btn1.onclick = function () {
+        //设定间歇定时器 setInterval 参数 1回调函数 2时间间隔（单位是毫秒）
+        timer = setInterval(function () {
+            console.log("起来嗨");
+        }, 1000);
+    };
+    btn2.onclick = function () {
+        //清理定时器
+        clearInterval(timer);
+    };
+</script>
+</body>
+</html>
